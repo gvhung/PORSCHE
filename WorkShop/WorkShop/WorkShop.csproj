@@ -1,19 +1,41 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
-<Project ToolsVersion="12.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
-  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+<Project DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003" ToolsVersion="4.0">
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>{AE5B540E-1C27-4383-AE8A-1A43F8CB9BFF}</ProjectGuid>
+    <ProductVersion>8.0.50727</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{F069FFFD-23FB-409B-AF20-4108987B2DE9}</ProjectGuid>
     <OutputType>WinExe</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>WorkShop</RootNamespace>
-    <AssemblyName>WorkShop</AssemblyName>
+    <RootNamespace>Workshop</RootNamespace>
+    <AssemblyName>Workshop</AssemblyName>
+    <TargetZone>LocalIntranet</TargetZone>
+    <GenerateManifests>false</GenerateManifests>
+    <ApplicationIcon>wavefulback.ico</ApplicationIcon>
     <TargetFrameworkVersion>v2.0</TargetFrameworkVersion>
-    <FileAlignment>512</FileAlignment>
+    <FileUpgradeFlags>
+    </FileUpgradeFlags>
+    <UpgradeBackupLocation>
+    </UpgradeBackupLocation>
+    <OldToolsVersion>2.0</OldToolsVersion>
+    <PublishUrl>publish\</PublishUrl>
+    <Install>true</Install>
+    <InstallFrom>Disk</InstallFrom>
+    <UpdateEnabled>false</UpdateEnabled>
+    <UpdateMode>Foreground</UpdateMode>
+    <UpdateInterval>7</UpdateInterval>
+    <UpdateIntervalUnits>Days</UpdateIntervalUnits>
+    <UpdatePeriodically>false</UpdatePeriodically>
+    <UpdateRequired>false</UpdateRequired>
+    <MapFileExtensions>true</MapFileExtensions>
+    <ApplicationRevision>0</ApplicationRevision>
+    <ApplicationVersion>1.0.0.%2a</ApplicationVersion>
+    <IsWebBootstrapper>false</IsWebBootstrapper>
+    <UseApplicationTrust>false</UseApplicationTrust>
+    <BootstrapperEnabled>true</BootstrapperEnabled>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
-    <PlatformTarget>AnyCPU</PlatformTarget>
     <DebugSymbols>true</DebugSymbols>
     <DebugType>full</DebugType>
     <Optimize>false</Optimize>
@@ -21,42 +43,328 @@
     <DefineConstants>DEBUG;TRACE</DefineConstants>
     <ErrorReport>prompt</ErrorReport>
     <WarningLevel>4</WarningLevel>
+    <UseVSHostingProcess>false</UseVSHostingProcess>
+    <CodeAnalysisRuleSet>AllRules.ruleset</CodeAnalysisRuleSet>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
-    <PlatformTarget>AnyCPU</PlatformTarget>
     <DebugType>pdbonly</DebugType>
     <Optimize>true</Optimize>
     <OutputPath>bin\Release\</OutputPath>
     <DefineConstants>TRACE</DefineConstants>
     <ErrorReport>prompt</ErrorReport>
     <WarningLevel>4</WarningLevel>
+    <CodeAnalysisRuleSet>AllRules.ruleset</CodeAnalysisRuleSet>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="DevExpress.Data.v7.2, Version=7.2.2.0, Culture=neutral, PublicKeyToken=9b171c9fd64da1d1">
+      <HintPath>..\Lib\DevExpress.Data.v7.2.dll</HintPath>
+    </Reference>
+    <Reference Include="DevExpress.LocalizationCHS, Version=7.2.2.0, Culture=neutral, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.Utils.v7.2, Version=7.2.2.0, Culture=neutral, PublicKeyToken=9b171c9fd64da1d1">
+      <HintPath>..\Lib\DevExpress.Utils.v7.2.dll</HintPath>
+    </Reference>
+    <Reference Include="DevExpress.XtraCharts.v7.2, Version=7.2.2.0, Culture=neutral, PublicKeyToken=9b171c9fd64da1d1">
+      <HintPath>..\Lib\DevExpress.XtraCharts.v7.2.dll</HintPath>
+    </Reference>
+    <Reference Include="DevExpress.XtraCharts.v7.2.UI, Version=7.2.2.0, Culture=neutral, PublicKeyToken=9b171c9fd64da1d1">
+      <HintPath>..\Lib\DevExpress.XtraCharts.v7.2.UI.dll</HintPath>
+    </Reference>
+    <Reference Include="DevExpress.XtraEditors.v7.2, Version=7.2.2.0, Culture=neutral, PublicKeyToken=9b171c9fd64da1d1">
+      <HintPath>..\Lib\DevExpress.XtraEditors.v7.2.dll</HintPath>
+    </Reference>
+    <Reference Include="DevExpress.XtraGrid.v7.2, Version=7.2.2.0, Culture=neutral, PublicKeyToken=9b171c9fd64da1d1">
+      <HintPath>..\Lib\DevExpress.XtraGrid.v7.2.dll</HintPath>
+    </Reference>
+    <Reference Include="DevExpress.XtraPrinting.v7.2, Version=7.2.2.0, Culture=neutral, PublicKeyToken=9b171c9fd64da1d1, processorArchitecture=MSIL">
+      <HintPath>..\Lib\DevExpress.XtraPrinting.v7.2.dll</HintPath>
+    </Reference>
+    <Reference Include="DevExpress.XtraReports.v7.2, Version=7.2.2.0, Culture=neutral, PublicKeyToken=9b171c9fd64da1d1, processorArchitecture=MSIL">
+      <HintPath>..\Lib\DevExpress.XtraReports.v7.2.dll</HintPath>
+    </Reference>
     <Reference Include="System" />
     <Reference Include="System.Data" />
     <Reference Include="System.Deployment" />
+    <Reference Include="System.Design" />
     <Reference Include="System.Drawing" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Web.Services" />
     <Reference Include="System.Windows.Forms" />
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Form1.cs">
+    <Compile Include="AppConfig.cs" />
+    <Compile Include="bin\Release\WorkshopUpdate\App_Code\Service.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="ChinaCalendar.cs" />
+    <Compile Include="ClassTripleDES.cs" />
+    <Compile Include="ClsBLL.cs" />
+    <Compile Include="ConnectionSets.cs" />
+    <Compile Include="frmBooking.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Form1.Designer.cs">
-      <DependentUpon>Form1.cs</DependentUpon>
+    <Compile Include="frmBooking.Designer.cs">
+      <DependentUpon>frmBooking.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmBookNew.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmBookNew.Designer.cs">
+      <DependentUpon>frmBookNew.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmCarStateBoard.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmCarStateBoard.Designer.cs">
+      <DependentUpon>frmCarStateBoard.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmCarTop.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmCarTop.Designer.cs">
+      <DependentUpon>frmCarTop.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmChart.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmChart.Designer.cs">
+      <DependentUpon>frmChart.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmDelayService.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmDelayService.Designer.cs">
+      <DependentUpon>frmDelayService.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmLogin.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmLogin.Designer.cs">
+      <DependentUpon>frmLogin.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmMain.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmMain.Designer.cs">
+      <DependentUpon>frmMain.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmMsg.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmMsg.Designer.cs">
+      <DependentUpon>frmMsg.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmNewWorker.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmNewWorker.Designer.cs">
+      <DependentUpon>frmNewWorker.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmParkSite.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmParkSite.Designer.cs">
+      <DependentUpon>frmParkSite.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmPause.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmPause.Designer.cs">
+      <DependentUpon>frmPause.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmSelectBook.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmSelectBook.Designer.cs">
+      <DependentUpon>frmSelectBook.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmServiceItem.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmServiceItem.Designer.cs">
+      <DependentUpon>frmServiceItem.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmSysLog.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmSysLog.Designer.cs">
+      <DependentUpon>frmSysLog.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmSysSet.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmSysSet.Designer.cs">
+      <DependentUpon>frmSysSet.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmUpdate.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmUpdate.Designer.cs">
+      <DependentUpon>frmUpdate.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmWork.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmWork.Designer.cs">
+      <DependentUpon>frmWork.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmWorkDay.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmWorkDay.Designer.cs">
+      <DependentUpon>frmWorkDay.cs</DependentUpon>
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="frmBooking.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>frmBooking.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmBookNew.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>frmBookNew.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmCarStateBoard.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>frmCarStateBoard.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmCarTop.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>frmCarTop.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmChart.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>frmChart.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmDelayService.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>frmDelayService.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmLogin.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>frmLogin.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmMain.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>frmMain.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmMsg.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>frmMsg.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmNewWorker.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>frmNewWorker.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmParkSite.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>frmParkSite.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmPause.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>frmPause.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmSelectBook.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>frmSelectBook.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmServiceItem.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>frmServiceItem.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmSysLog.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>frmSysLog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmSysSet.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>frmSysSet.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmUpdate.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>frmUpdate.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmWork.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>frmWork.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmWorkDay.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>frmWorkDay.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
       <LastGenOutput>Resources.Designer.cs</LastGenOutput>
       <SubType>Designer</SubType>
     </EmbeddedResource>
+    <EmbeddedResource Include="frmReport.resx">
+      <DependentUpon>frmReport.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmAddHourReser.resx">
+      <DependentUpon>frmAddHourReser.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="XrPause.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>XrPause.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="XrROList.resx">
+      <DependentUpon>XrROList.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="XrCars.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>XrCars.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmParts.resx">
+      <DependentUpon>frmParts.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmChangeState.resx">
+      <DependentUpon>frmChangeState.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmAddHour2Day.resx">
+      <DependentUpon>frmAddHour2Day.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmAddHourAddItem.resx">
+      <DependentUpon>frmAddHourAddItem.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmBookLook.resx">
+      <DependentUpon>frmBookLook.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
     <Compile Include="Properties\Resources.Designer.cs">
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
     </Compile>
+    <BaseApplicationManifest Include="Properties\app.manifest" />
+    <None Include="bin\Debug\Update.exe.config" />
+    <None Include="bin\Debug\Update.exe.config.bak" />
+    <None Include="bin\Debug\Workshop.exe.config" />
+    <None Include="bin\Debug\Workshop.vshost.exe.config" />
+    <None Include="bin\Debug\WorkShop.vshost.exe.manifest" />
+    <None Include="bin\Release\CliCfg.ini" />
+    <None Include="bin\Release\DBConnectSet.xmlp" />
+    <None Include="bin\Release\Update.exe.config" />
+    <None Include="bin\Release\Update.exe.config.bak" />
+    <None Include="bin\Release\Workshop.exe.config" />
+    <None Include="bin\Release\Workshop.exe.config.bak" />
+    <None Include="bin\Release\Workshop.rar" />
+    <None Include="bin\Release\Workshop.vshost.exe.config" />
+    <None Include="bin\Release\Workshop.vshost.exe.manifest" />
+    <None Include="bin\Release\WorkShop1012\WorkShop1012" />
+    <None Include="bin\Release\WorkShop1012\WorkShop_1012" />
+    <None Include="bin\Release\Workshop1213.rar" />
+    <None Include="bin\Release\Workshop20141209.zip" />
+    <None Include="bin\Release\WorkshopUpdate\Update.xml.bak" />
+    <None Include="bin\Release\Workshop更新文件.rar" />
+    <None Include="bin\Release\后台服务程序.rar" />
+    <None Include="bin\Release\客户自助查询.rar" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>
@@ -66,8 +374,163 @@
       <DependentUpon>Settings.settings</DependentUpon>
       <DesignTimeSharedInput>True</DesignTimeSharedInput>
     </Compile>
+    <Compile Include="SqlDbHepler.cs" />
+    <Compile Include="frmReport.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmReport.Designer.cs">
+      <DependentUpon>frmReport.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmAddHourReser.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmAddHourReser.Designer.cs">
+      <DependentUpon>frmAddHourReser.cs</DependentUpon>
+    </Compile>
+    <Compile Include="XrPause.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="XrPause.Designer.cs">
+      <DependentUpon>XrPause.cs</DependentUpon>
+    </Compile>
+    <Compile Include="XrROList.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="XrROList.Designer.cs">
+      <DependentUpon>XrROList.cs</DependentUpon>
+    </Compile>
+    <Compile Include="XrCars.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="XrCars.Designer.cs">
+      <DependentUpon>XrCars.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmParts.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmParts.Designer.cs">
+      <DependentUpon>frmParts.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmChangeState.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmChangeState.Designer.cs">
+      <DependentUpon>frmChangeState.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmAddHour2Day.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmAddHour2Day.Designer.cs">
+      <DependentUpon>frmAddHour2Day.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmAddHourAddItem.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmAddHourAddItem.Designer.cs">
+      <DependentUpon>frmAddHourAddItem.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmBookLook.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmBookLook.Designer.cs">
+      <DependentUpon>frmBookLook.cs</DependentUpon>
+    </Compile>
   </ItemGroup>
-  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <ItemGroup>
+    <None Include="App.config" />
+    <None Include="Resources\%2836,26%29.png" />
+    <None Include="Resources\Porsche logo.jpg" />
+    <None Include="Resources\Porsche logo-PORSCHE.jpg" />
+    <None Include="Resources\up1.JPG" />
+    <None Include="Resources\down1.JPG" />
+    <None Include="Resources\%2813,45%29.png" />
+    <None Include="Resources\%2816,01%29.png" />
+    <None Include="Resources\%2815,01%29.png" />
+    <None Include="Resources\%2800,40%29.png" />
+    <None Include="Resources\%2800,04%29.png" />
+    <None Include="Resources\%2800,34%29.png" />
+    <Content Include="bin\Debug\AppName.txt" />
+    <Content Include="bin\Debug\DBConnectSet.exe" />
+    <Content Include="bin\Debug\DBConnectSet.xml" />
+    <Content Include="bin\Debug\DevExpress.Data.v7.2.dll" />
+    <Content Include="bin\Debug\DevExpress.LocalizationCHS.dll" />
+    <Content Include="bin\Debug\DevExpress.Utils.v7.2.dll" />
+    <Content Include="bin\Debug\DevExpress.XtraBars.v7.2.dll" />
+    <Content Include="bin\Debug\DevExpress.XtraCharts.v7.2.dll" />
+    <Content Include="bin\Debug\DevExpress.XtraCharts.v7.2.UI.dll" />
+    <Content Include="bin\Debug\DevExpress.XtraEditors.v7.2.dll" />
+    <Content Include="bin\Debug\DevExpress.XtraGrid.v7.2.dll" />
+    <Content Include="bin\Debug\DevExpress.XtraNavBar.v7.2.dll" />
+    <Content Include="bin\Debug\DevExpress.XtraPrinting.v7.2.dll" />
+    <Content Include="bin\Debug\DevExpress.XtraReports.v7.2.dll" />
+    <Content Include="bin\Debug\DevExpress.XtraRichTextEdit.v7.2.dll" />
+    <Content Include="bin\Debug\energy.ico" />
+    <Content Include="bin\Debug\msiexec.exe" />
+    <Content Include="bin\Debug\network.ico" />
+    <Content Include="bin\Debug\Update.exe" />
+    <Content Include="bin\Debug\wavefulback.ico" />
+    <Content Include="bin\Debug\Workshop.exe" />
+    <Content Include="bin\Debug\Workshop.pdb" />
+    <Content Include="bin\Debug\WorkShop.vshost.exe" />
+    <Content Include="bin\local conn\DBConnectSet.xml" />
+    <Content Include="bin\Release\AppName.txt" />
+    <Content Include="bin\Release\DBConnectSet.exe" />
+    <Content Include="bin\Release\DBConnectSet.xml" />
+    <Content Include="bin\Release\energy.ico" />
+    <Content Include="bin\Release\Interop.NetRockey4NDCom.dll" />
+    <Content Include="bin\Release\msiexec.exe" />
+    <Content Include="bin\Release\NetRockey4NDCom.dll" />
+    <Content Include="bin\Release\network.ico" />
+    <Content Include="bin\Release\Update.exe" />
+    <Content Include="bin\Release\update.XML" />
+    <Content Include="bin\Release\wavefulback.ico" />
+    <Content Include="bin\Release\Workshop.exe" />
+    <Content Include="bin\Release\Workshop.pdb" />
+    <Content Include="bin\Release\Workshop.vshost.exe" />
+    <Content Include="bin\Release\WorkshopUpdate\Service.asmx" />
+    <Content Include="bin\Release\WorkshopUpdate\Update.xml" />
+    <Content Include="bin\Release\WorkshopUpdate\Update\Workshop.exe" />
+    <Content Include="bin\Release\后台服务程序.exe" />
+    <Content Include="bin\Release\复件 Workshop.exe" />
+    <Content Include="bin\Release\客户自助查询.exe" />
+    <Content Include="bin\Release\新建 文本文档.txt" />
+    <Content Include="bin\servcer conn\DBConnectSet.xml" />
+    <Content Include="Lib\DevExpress.Data.v7.2.dll" />
+    <Content Include="Lib\DevExpress.LocalizationCHS.dll" />
+    <Content Include="Lib\DevExpress.Utils.v7.2.dll" />
+    <Content Include="Lib\DevExpress.XtraBars.v7.2.dll" />
+    <Content Include="Lib\DevExpress.XtraCharts.v7.2.dll" />
+    <Content Include="Lib\DevExpress.XtraCharts.v7.2.UI.dll" />
+    <Content Include="Lib\DevExpress.XtraEditors.v7.2.dll" />
+    <Content Include="Lib\DevExpress.XtraGrid.v7.2.dll" />
+    <Content Include="Lib\DevExpress.XtraNavBar.v7.2.dll" />
+    <Content Include="Lib\DevExpress.XtraPrinting.v7.2.dll" />
+    <Content Include="Lib\DevExpress.XtraReports.v7.2.dll" />
+    <Content Include="Lib\DevExpress.XtraRichTextEdit.v7.2.dll" />
+    <Content Include="TextFile1.txt" />
+    <Content Include="wavefulback.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <BootstrapperPackage Include="Microsoft.Net.Client.3.5">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1 Client Profile</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.3.5.SP1">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Windows.Installer.3.1">
+      <Visible>False</Visible>
+      <ProductName>Windows Installer 3.1</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="bin\Release\WorkshopUpdate\App_Data\" />
+  </ItemGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
        Other similar extension points exist, see Microsoft.Common.targets.
   <Target Name="BeforeBuild">

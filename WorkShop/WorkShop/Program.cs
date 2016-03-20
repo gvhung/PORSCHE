@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using System.Windows.Forms;
 
-namespace WorkShop
+namespace Workshop
 {
     static class Program
     {
@@ -14,7 +14,24 @@ namespace WorkShop
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new Form1());
+
+            DevExpress.XtraEditors.Controls.Localizer.Active = new DevExpress.LocalizationCHS.XtraEditorsLocalizer();
+            DevExpress.XtraGrid.Localization.GridLocalizer.Active = new DevExpress.LocalizationCHS.XtraGridLocalizer();
+            try
+            {
+                //if (!System.IO.File.Exists(System.Environment.SystemDirectory + @"\NetRockey4NDCom.dll"))
+                //{
+                //    System.IO.File.Copy(Application.StartupPath + @"\NetRockey4NDCom.dll", System.Environment.SystemDirectory + @"\NetRockey4NDCom.dll");
+                //    //注册COM组件
+                //    string DllPath = System.Environment.SystemDirectory + @"\NetRockey4NDCom.dll";
+                //    System.Diagnostics.Process.Start("CMD.exe", "/c regsvr32/s " + DllPath);
+                //}
+                Application.Run(new frmMain());
+            }
+            catch (Exception Err)
+            {
+                MessageBox.Show(Err.Source + "/" + Err.TargetSite.Attributes.ToString() + "/" + Err.Message);
+            }
         }
     }
 }
