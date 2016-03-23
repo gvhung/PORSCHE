@@ -100,6 +100,10 @@
     <Compile Include="ClassTripleDES.cs" />
     <Compile Include="ClsBLL.cs" />
     <Compile Include="ConnectionSets.cs" />
+    <Compile Include="frmBook.cs" />
+    <Compile Include="frmBook.Designer.cs">
+      <DependentUpon>frmBook.cs</DependentUpon>
+    </Compile>
     <Compile Include="frmBooking.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -214,8 +218,15 @@
     <Compile Include="frmWorkDay.Designer.cs">
       <DependentUpon>frmWorkDay.cs</DependentUpon>
     </Compile>
+    <Compile Include="frmWorkerSit.cs" />
+    <Compile Include="frmWorkerSit.Designer.cs">
+      <DependentUpon>frmWorkerSit.cs</DependentUpon>
+    </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="frmBook.resx">
+      <DependentUpon>frmBook.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="frmBooking.resx">
       <SubType>Designer</SubType>
       <DependentUpon>frmBooking.cs</DependentUpon>
@@ -291,6 +302,9 @@
     <EmbeddedResource Include="frmWorkDay.resx">
       <SubType>Designer</SubType>
       <DependentUpon>frmWorkDay.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmWorkerSit.resx">
+      <DependentUpon>frmWorkerSit.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
@@ -449,6 +463,7 @@
     <None Include="Resources\%2800,40%29.png" />
     <None Include="Resources\%2800,04%29.png" />
     <None Include="Resources\%2800,34%29.png" />
+    <Content Include="backpic.jpg" />
     <Content Include="bin\Debug\AppName.txt" />
     <Content Include="bin\Debug\DBConnectSet.exe" />
     <Content Include="bin\Debug\DBConnectSet.xml" />
@@ -495,6 +510,7 @@
     <Content Include="bin\Release\客户自助查询.exe" />
     <Content Include="bin\Release\新建 文本文档.txt" />
     <Content Include="bin\servcer conn\DBConnectSet.xml" />
+    <Content Include="bk.JPG" />
     <Content Include="Lib\DevExpress.Data.v7.2.dll" />
     <Content Include="Lib\DevExpress.LocalizationCHS.dll" />
     <Content Include="Lib\DevExpress.Utils.v7.2.dll" />
@@ -507,6 +523,7 @@
     <Content Include="Lib\DevExpress.XtraPrinting.v7.2.dll" />
     <Content Include="Lib\DevExpress.XtraReports.v7.2.dll" />
     <Content Include="Lib\DevExpress.XtraRichTextEdit.v7.2.dll" />
+    <Content Include="porsche.JPG" />
     <Content Include="TextFile1.txt" />
     <Content Include="wavefulback.ico" />
   </ItemGroup>
